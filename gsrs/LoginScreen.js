@@ -18,6 +18,10 @@ const LoginScreen = ({ navigation }) => {
     navigation.navigate('SignIn');  
   };
 
+  const handleForgotPassword = () => {
+    navigation.navigate('ForgotPassword');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
@@ -37,7 +41,7 @@ const LoginScreen = ({ navigation }) => {
           value={password}
           onChangeText={setPassword}
         />
-        <TouchableOpacity onPress={() => {}} style={styles.forgotPasswordButton}>
+        <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotPasswordButton}>
           <Text style={styles.forgotPasswordText}>Şifremi Unuttum</Text>
         </TouchableOpacity>
       </View>
