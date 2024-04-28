@@ -11,7 +11,38 @@ const HomeScreen = ({navigation}) => {
     const handleProfilePress = () => {
       navigation.navigate('Login');
     };
-    
+
+    const handleKuaforPress = () => {
+      navigation.navigate('Kuafor');
+    };
+
+    const handleBerberPress = () => {
+      navigation.navigate('Berber');
+    };
+
+    const handleGemPress = () => {
+      navigation.navigate('Gem');
+    };
+
+    const handleSacPress = () => {
+      navigation.navigate('Sac');
+    };
+
+    const handleMasajPress = () => {
+      navigation.navigate('Masaj');
+    };
+
+    const handleCiltPress = () => {
+      navigation.navigate('Cilt');
+    };
+
+    const handleSolaryumPress = () => {
+      navigation.navigate('Solaryum');
+    };
+
+    const handleMakyajPress = () => {
+      navigation.navigate('Makyaj');
+    };
   
     return (
       <View style={styles.container}>
@@ -29,32 +60,34 @@ const HomeScreen = ({navigation}) => {
             <Text style={styles.profileButtonText}>Profil</Text>
           </TouchableOpacity>
       </View>
+        
         <ScrollView contentContainerStyle={styles.categoriesContainer}  showsVerticalScrollIndicator={false}>
-          <View style={styles.categoryBox}>
+          <TouchableOpacity onPress={handleKuaforPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Kuaförler</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleBerberPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Berberler</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleGemPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Güzellik ve Estetik Merkezleri</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleSacPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Saç Hizmetleri</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleMasajPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Masaj Hizmetleri</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleCiltPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Cilt Bakım Hizmetleri</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleSolaryumPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Solaryum Hizmetleri</Text>
-          </View>
-          <View style={styles.categoryBox}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleMakyajPress} style={styles.categoryBox}>
             <Text style={styles.categoryText}>Makyaj Hizmetleri</Text>
-          </View>
-        </ScrollView>
+          </TouchableOpacity>
+          </ScrollView>
+        
       </View>
     );
   };
@@ -106,7 +139,7 @@ const HomeScreen = ({navigation}) => {
       flexWrap: 'wrap',
       justifyContent: 'space-between',
     },
-    categoryBox: {
+    categoryBox: {   
       width: '100%', //kutu genişliği
       borderWidth: 1,
       borderColor: '#ccc',
@@ -128,6 +161,10 @@ const HomeScreen = ({navigation}) => {
       color: 'white',
       backgroundColor: 'rgba(128, 128, 128, 0.7)', // Opak gri arka plan
     },
+
+    categoryKuafor:{
+      width: '100%',
+    }
   });
   
   export default HomeScreen;

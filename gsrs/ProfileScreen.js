@@ -1,10 +1,36 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import * as ImagePicker from 'react-native-image-picker';
 
 const ProfileScreen = () => {
+  const [avatarSource, setAvatarSource] = useState(null);
   const [username, setUsername] = useState('JohnDoe');
   const [email, setEmail] = useState('johndoe@example.com');
   const [password, setPassword] = useState('********'); // Şifre gizli
+
+  const selectImage = () => {
+    const options = {
+      title: 'Fotoğraf Seç',
+      cancelButtonTitle: 'İptal',
+      takePhotoButtonTitle: 'Kamera ile Çek',
+      chooseFromLibraryButtonTitle: 'Galeriden Seç',
+      mediaType: 'photo',
+      quality: 1,
+      maxWidth: 500,
+      maxHeight: 500,
+    };
+
+    ImagePicker.showImagePicker(options, (response) => {
+      if (response.didCancel) {
+        console.log('Kullanıcı seçimi iptal etti');
+      } else if (response.error) {
+        console.log('Hata:', response.error);
+      } else {
+        const source = { uri: response.uri };
+        setAvatarSource(source);
+      }
+    });
+  }
 
   const handleUpdateProfile = () => {
     // Profil güncelleme
@@ -16,6 +42,14 @@ const ProfileScreen = () => {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={selectImage} style={styles.avatarContainer}>
+        {avatarSource === null ? (
+          <Text style={styles.avatarText}>Profil Fotoğrafını Seç</Text>
+        ) : (
+          <Image source={avatarSource} style={styles.avatarImage} />
+        )}
+      </TouchableOpacity>
+
       <Text style={styles.title}>Profil</Text>
       <View style={styles.inputContainer}>
         <TextInput
@@ -83,6 +117,24 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  avatarContainer: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    marginBottom: 30,
+    backgroundColor: '#ccc',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  avatarText: {
+    fontSize: 16,
+    color: 'black',
+  },
+  avatarImage: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
   },
 });
 
