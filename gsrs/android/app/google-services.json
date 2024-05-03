@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "419763627515",
+    "project_id": "gsrs-1b9bd",
+    "storage_bucket": "gsrs-1b9bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419763627515:android:0d83b51d8116fb77e3975e",
+        "android_client_info": {
+          "package_name": "com.gsrs.gsrs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwHH5ck5H7IFrz3RM7o1t47pt7dRBzi8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

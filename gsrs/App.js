@@ -2,19 +2,19 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import HomeScreen from './HomeScreen';
-import LoginScreen from './LoginScreen';
-import ProfileScreen from './ProfileScreen';
-import SignInScreen from './SignInScreen';
-import ForgotPasswordScreen from './ForgotPasswordScreen';
-import KuaforScreen from './KuaforScreen';
-import BerberScreen from './BerberScreen';
-import CiltScreen from './CiltScreen';
-import GemScreen from './GemScreen';
-import MakyajScreen from './MakyajScreen';
-import MasajScreen from './MasajScreen';
-import SacScreen from './SacScreen';
-import SolaryumScreen from './SolaryumScreen';
+import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import SignInScreen from './screens/SignInScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import KuaforScreen from './screens/KuaforScreen';
+import BerberScreen from './screens/BerberScreen';
+import CiltScreen from './screens/CiltScreen';
+import GemScreen from './screens/GemScreen';
+import MakyajScreen from './screens/MakyajScreen';
+import MasajScreen from './screens/MasajScreen';
+import SacScreen from './screens/SacScreen';
+import SolaryumScreen from './screens/SolaryumScreen';
 
 const Stack = createNativeStackNavigator();
 
