@@ -15,14 +15,16 @@ import MakyajScreen from './screens/MakyajScreen';
 import MasajScreen from './screens/MasajScreen';
 import SacScreen from './screens/SacScreen';
 import SolaryumScreen from './screens/SolaryumScreen';
+import WelcomeScreen from './screens/WelcomeScreen';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Giriş Yap' }} />
         <Stack.Screen name="SignIn" component={SignInScreen} options={{ title: 'Kayıt Ol' }} />
         <Stack.Screen name="Profile" component={ProfileScreen} options={{ title: 'Profil' }} />
