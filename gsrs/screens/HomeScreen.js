@@ -9,7 +9,7 @@ const HomeScreen = ({navigation}) => {
     };
 
     const handleProfilePress = () => {
-        navigation.navigate('Login');
+        navigation.navigate('Profile');
     };
 
     const handleKuaforPress = () => {

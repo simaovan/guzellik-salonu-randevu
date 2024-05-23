@@ -17,7 +17,7 @@ const WelcomeScreen = ({ navigation }) => {
         }
         else {
           // İlk açılış değilse, ana ekrana yönlendir
-          navigation.replace('Home');
+          navigation.replace('Login');
         }
       } catch (error) {
         console.error('Hoşgeldiniz ekranı gösterilirken bir hata oluştu:', error);
